@@ -58,8 +58,7 @@ def _pycross_wheel_library_impl(ctx):
     imp = paths.join(
         ctx.label.workspace_name or ctx.workspace_name,  # Default to the local workspace.
         ctx.label.package,
-        ctx.label.name,
-        "site-packages",  # we put lib files in this subdirectory.
+        ctx.label.name
     )
 
     imports = depset(
