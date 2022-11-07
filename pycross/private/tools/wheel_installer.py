@@ -45,7 +45,7 @@ def main() -> None:
     args = parser.parse_args()
 
     dest_dir = Path(args.directory)
-    lib_dir = dest_dir / "site-packages"
+    lib_dir = dest_dir # / "site-packages"
     destination = SchemeDictionaryDestination(
         scheme_dict={
             "platlib": str(lib_dir),
